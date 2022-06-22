@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="content">
+                <div class="word">
+                    <h2>Learn to code by watching others</h2>
+                    <p>See how experienced developers solve problems in real-time. Watching 
+                        scripted tutorials is great, but understanding how developers think 
+                        is invaluable.
+                    </p>
+                </div>
+                <div class="form">
+                    <div class="ad">
+                        <p>
+                            Try if free 7 days
+                            <span>then $20/mo, thereafter</span>
+                        </p>
+                    </div>
+                    <form action="" class="contact-form" autocomplete="none">
+                        <div class="input-control" input-2>
+                            <input name="first" type="text" required placeholder="First Name"
+                            autocomplete="none">
+                            <div class="error" data-error="First Name cannot be empty">
+                            </div>
+                        </div>
+                        <div class="input-control" input-2>
+                            <input type="text" name="last" required placeholder="Last Name" autocomplete="none">
+                            <div class="error" data-error="Last Name cannot be empty"></div>
+                        </div>
+                        <div class="input-control" input-2">
+                            <input id="email" type="email" required placeholder="Email Address"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                            autocomplete="none">
+                            <div class="error" data-error="Looks like this is not an email">
+                            </div>
+                        </div>
+                        <div class="input-control" input-2>
+                            <input type="password" name="password" required placeholder="Password">
+                            <div class="error" data-error="Password cannot be empty"></div>
+                        </div>
+                        <div class="btn">
+                            <button id="submit">CLAIM YOUR FREE TRIAL</button>
+                        </div>
+                        <div class="form-footer">
+                            <p>By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

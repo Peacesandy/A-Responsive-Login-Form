@@ -1,0 +1,243 @@
+*,
+:root{
+    --red: hsl(0,100%, 74%);
+    --green:hsl(15, 59%,51%);
+    --purple:hsl(248, 32%, 49%);
+    --purple-2:hsla(249, 76%, 10%, 0.593);
+    --dark-blue:hsl(249, 10%, 26%);
+    --grey-blue:hsl(246, 25%, 77%);
+    --grey-1:#ffffff;
+    --grey-2:#e1e1e1;
+    --grey-3:#3f3f3f;
+    --bx-sh: 0 7px 2px rgba(0,0,0, 0.204);
+    --trans: all 400ms;
+    margin: 0;
+    padding: 0;
+    outline:none;
+    box-sizing: border-box;
+}
+body{
+    background: var(--red);
+    background-image: url(bg-intro-desktop.png);
+    background-color: hsl(0,100%, 74%);
+}
+
+html,
+body,
+main{
+    height: 100%;
+    font-family: sans-serif;
+}
+.container{
+    justify-content: center;
+    align-items: center;
+    padding: 0 4rem;
+    transition: var(--trans);
+    display: flex;
+    height: 100%;
+}
+.container.content{
+    justify-content: space-between;
+    display: flex;
+}
+.container .content .word{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container .content .word h2{
+color: var(--grey-1);
+font-size: 3rem;
+margin-bottom: 2rem;
+text-align: center;
+}
+
+.container .content .word p{
+    color: var(--grey-1);
+    font-size: 17px;
+    margin-bottom: 4rem;
+}
+
+.container .content .form{
+    margin: 0 2rem;
+    flex: 1;
+}
+
+.container .content .form .ad{
+background: var(--purple);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 18px 2rem;
+border-radius: 10px;
+margin-bottom: 1.2rem;
+box-shadow: var(--bx-sh);
+}
+.container .content .form .ad p{
+    color:var(--grey-1);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container .content .form .ad p span{
+    font-size: 12px;
+    font-weight: 300;
+}
+@media (max-width:501px) {
+    .container .content .form .ad{
+        text-align: center;
+        padding: 15px;
+        transition: var(--trans);
+    }
+}
+
+.container .content .form .contact-form{
+    background: var(--grey-1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2.4rem;
+    border-radius: 10px;
+    box-shadow: var(--bx-sh);
+    transition: var(--trans);
+}
+
+.container .content .form .contact-form .input-control{
+    width: 100%;
+    transition: var(--trans);
+    position: relative;
+}
+
+.container .content .form .contact-form .input-control input{
+padding: 15px 2rem;
+color: var(--grey-3);
+width: 100%;
+margin-bottom: 1.3rem;
+font-size: 16px;
+font-weight: 600;
+border-radius: 7px;
+border: 1px solid var(--grey-2);
+transform: var(--trans);
+}
+
+.container .content .form .contact-form .input-control input:focus{
+    border: 1px solid var(--purple-2);
+}
+
+.container .content .form .contact-form .input-control
+input[type=text] {
+    text-transform: capitalize;
+}
+
+
+
+.container .content .form .contact-form .input-control input:focus:invalid~.error{
+    position: relative;
+    margin: 1.5rem;
+}
+.container .content .form .contact-form .input-control input:focus:invalid {
+    background: url(icon-error.svg) no-repeat 95%
+    50%;
+    background-size: 25px;
+    border: 2px solid var(--red);
+    transition: border 10ms;
+}
+
+.container .content .form .contact-form .input-control input:focus:invalid~.error::after {
+    content: attr(data-error);
+    position: absolute;
+    bottom: 0;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+    right: 0;
+    padding-bottom: 1rem;
+    color: var(--red);
+}
+
+.container .content .form .contact-form .btn{
+    width: 100%;
+    background: rgb(124, 238, 124);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.18);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--trans);
+}
+.container .content .form .contact-form .btn #submit{
+    border: none;
+    color: var(--grey-1);
+    background: none;
+    font-weight: 600; 
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+}
+.container .content .form .contact-form .btn:hover,
+.container .conten .form .contact-form .btn:active
+{
+    opacity: 0.6;
+    transition: var(--trans);
+}
+
+.container .content .form .form-footer{
+    margin-top: 1.2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.container .content .form .form-footer p{
+    color:#b9b9b9 ;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.container .content .form .form-footer p span {
+    color: var(--red);
+    font-weight: 700;
+}
+@media (max-width: 501px) {
+    .container .content .form .form-footer{
+        text-align: center;
+        transition: var(--trans);
+    }
+}
+@media(max-width:950px){
+    .container .content{
+        justify-content: center;
+        flex-direction: column;
+    }
+.container .content .word{
+    text-align: center;
+}
+.container .content .word h2{
+    font-size: 2.3rem;
+}
+.container .content .word p{
+    margin-bottom: 3rem;
+}
+}
+@media(max-width:1000px){
+    .container{
+        padding: 0.2rem;
+        transition: var(--trans);
+    }
+}
+
+@media(max-width:500px){
+    .container{
+        padding: 0 10px;
+        transition: var(--trans);
+    }
+}
+
+
+
+
+
+
+
